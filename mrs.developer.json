@@ -1,0 +1,5 @@
+{
+  "volto-frontend": {
+    "local": "addons/volto-frontend/src"
+  }
+}
