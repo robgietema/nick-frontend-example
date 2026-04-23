@@ -7,9 +7,9 @@ import {
   Input,
   DropdownMenu,
   DropdownItem,
-  DropdownDivider,
   Dropdown,
 } from 'semantic-ui-react';
+import Cookies from 'universal-cookie';
 import cx from 'classnames';
 import { compact, last, map, keys, trim } from 'lodash';
 import { toast } from 'react-toastify';
@@ -47,6 +47,7 @@ const Assistant = (props) => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
+  const cookies = new Cookies();
 
   const [speechListening, setSpeechListening] = useState(false);
   const [inputValue, setInputValue] = useState('');
@@ -319,6 +320,7 @@ const Assistant = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${cookies.get('auth_token')}`,
       },
       body: JSON.stringify({
         prompt: value,

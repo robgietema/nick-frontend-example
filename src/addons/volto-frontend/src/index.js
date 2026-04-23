@@ -1,5 +1,6 @@
 import reducers from './reducers';
 import Assistant from './components/Assistant/Assistant';
+import VideoView from './components/View/VideoView';
 
 const applyConfig = (config) => {
   config.addonReducers = { ...config.addonReducers, ...reducers };
@@ -13,6 +14,7 @@ const applyConfig = (config) => {
       },
     ],
   };
+  config.views.contentTypesViews.Video = VideoView;
   return config;
 };
 
