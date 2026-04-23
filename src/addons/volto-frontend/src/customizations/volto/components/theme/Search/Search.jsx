@@ -25,6 +25,8 @@ import Icon from '@plone/volto/components/theme/Icon/Icon';
 import paginationLeftSVG from '@plone/volto/icons/left-key.svg';
 import paginationRightSVG from '@plone/volto/icons/right-key.svg';
 
+import Markdown from 'react-markdown';
+
 const messages = defineMessages({
   Search: {
     id: 'Search',
@@ -113,6 +115,7 @@ class Search extends Component {
     const options = qs.parse(this.props.history.location.search);
     this.setState({ currentPage: 1 });
     options['use_site_search_settings'] = 1;
+    options['use_ai'] = 1;
     this.props.searchContent('', {
       b_size: this.defaultPageSize,
       ...options,
@@ -123,6 +126,7 @@ class Search extends Component {
     window.scrollTo(0, 0);
     let options = qs.parse(this.props.history.location.search);
     options['use_site_search_settings'] = 1;
+    options['use_ai'] = 1;
 
     this.setState({ currentPage: activePage }, () => {
       this.props.searchContent('', {
@@ -182,6 +186,21 @@ class Search extends Component {
                   />
                 )}
               </h1>
+
+              {this.props.search?.ai && (
+                <div className="search-ai-response">
+                  <h2>
+                    <FormattedMessage
+                      id="AI-response"
+                      defaultMessage="AI-response"
+                    />
+                  </h2>
+                  <p>
+                    <Markdown>{this.props.search.ai}</Markdown>
+                    <br />
+                  </p>
+                </div>
+              )}
 
               <SearchTags />
 
@@ -366,6 +385,7 @@ export default compose(
           searchContent('', {
             ...qs.parse(location.search),
             use_site_search_settings: 1,
+            use_ai: 1,
           }),
         ),
     },

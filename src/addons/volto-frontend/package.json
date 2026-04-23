@@ -42,6 +42,9 @@
     "stylelint-config-sass-guidelines": "11.0.0",
     "stylelint-prettier": "5.0.0"
   },
+  "dependencies": {
+    "react-markdown": "10.1.0"
+  },
   "peerDependencies": {
     "@plone/volto": "^18.0.0"
   }
