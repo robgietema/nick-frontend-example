@@ -28,7 +28,7 @@ const VideoView = ({ content }) => {
       )}
       <video width="400" controls>
         <source
-          src={content.video.download}
+          src={content.video.download.replace('/@@download', '/@@videos')}
           type={content.video['content-type']}
         />
       </video>
