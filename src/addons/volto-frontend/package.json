@@ -21,6 +21,9 @@
     "release-alpha": "release-it --preRelease=alpha",
     "release-rc": "release-it --preRelease=rc"
   },
+  "addons": [
+    "@plone/volto-form-block"
+  ],
   "devDependencies": {
     "@babel/eslint-parser": "7.23.10",
     "@plone/scripts": "^3.5.0",
@@ -43,9 +46,10 @@
     "stylelint-prettier": "5.0.0"
   },
   "dependencies": {
+    "@plone/volto-form-block": "1.0.0-alpha.1",
     "react-markdown": "10.1.0"
   },
   "peerDependencies": {
-    "@plone/volto": "^18.0.0"
+    "@plone/volto": "18.33.1"
   }
 }

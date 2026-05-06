@@ -2348,6 +2348,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hcaptcha/react-hcaptcha@npm:^0.3.6":
+  version: 0.3.10
+  resolution: "@hcaptcha/react-hcaptcha@npm:0.3.10"
+  peerDependencies:
+    react: ">= 16.3.0"
+    react-dom: ">= 16.3.0"
+  checksum: 3b0d6a8c7da8072ba226663d9904051231cc1754936a1082b46764a966004406876971adb8917d3d7c6920283501c1bd5b7886c83e33885c4b8d5218fdc25ff5
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.13.0":
   version: 0.13.0
   resolution: "@humanwhocodes/config-array@npm:0.13.0"
@@ -3350,6 +3360,20 @@ __metadata:
     react-dom:
       optional: true
   checksum: b77f503f872326e19ebffd084658758899dc7fa1d97c19aad5890d68d69f2ccff714113f119e6d27e9515fd4e143b4fe81e94e1cbd1b9a625b6072c9f4367604
+  languageName: node
+  linkType: hard
+
+"@plone/volto-form-block@npm:1.0.0-alpha.1":
+  version: 1.0.0-alpha.1
+  resolution: "@plone/volto-form-block@npm:1.0.0-alpha.1"
+  dependencies:
+    "@hcaptcha/react-hcaptcha": ^0.3.6
+    file-saver: ^2.0.5
+    react-google-recaptcha-v3: ^1.8.0
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: f47e158369e5f2c0218e3bca126a571301ff6dbd4a64f346344bc13d0d3cf05665548abaca2399aa3a80b6a345e393a1dd423242702239341d2b5324436b0e27
   languageName: node
   linkType: hard
 
@@ -10929,6 +10953,13 @@ __metadata:
   peerDependencies:
     webpack: ^4.0.0
   checksum: a005ac5599e96631e8ead32db874283ef821c121e93997b0d6f853db1284bcd7832e1ac59d39a21c201de22b6e33146996c28bd8c486893a5191c334a00f61b2
+  languageName: node
+  linkType: hard
+
+"file-saver@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "file-saver@npm:2.0.5"
+  checksum: c62d96e5cebc58b4bdf3ae8a60d5cf9607ad82f75f798c33a4ee63435ac2203002584d5256a2a780eda7feb5e19dc3b6351c2212e58b3f529e63d265a7cc79f7
   languageName: node
   linkType: hard
 
@@ -19357,6 +19388,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-google-recaptcha-v3@npm:^1.8.0":
+  version: 1.11.0
+  resolution: "react-google-recaptcha-v3@npm:1.11.0"
+  dependencies:
+    hoist-non-react-statics: ^3.3.2
+  peerDependencies:
+    react: ^16.3 || ^17.0 || ^18.0 || ^19.0
+    react-dom: ^17.0 || ^18.0 || ^19.0
+  checksum: 8946eeba751c444ac81d4df6374b38b3ce4ecc4b5c36459972b07c504476c7571c0fc901039a082dcfa4b49be90f115a1fb0c2e77cecfcceb5e44ae2d30ea250
+  languageName: node
+  linkType: hard
+
 "react-image-gallery@npm:1.2.7":
   version: 1.2.7
   resolution: "react-image-gallery@npm:1.2.7"
@@ -23881,6 +23924,7 @@ __metadata:
   dependencies:
     "@babel/eslint-parser": 7.23.10
     "@plone/scripts": ^3.5.0
+    "@plone/volto-form-block": 1.0.0-alpha.1
     eslint: ^8.57.0
     eslint-config-prettier: ^9.1.0
     eslint-config-react-app: ^7.0.1
@@ -23900,7 +23944,7 @@ __metadata:
     stylelint-config-sass-guidelines: 11.0.0
     stylelint-prettier: 5.0.0
   peerDependencies:
-    "@plone/volto": ^18.0.0
+    "@plone/volto": 18.33.1
   languageName: unknown
   linkType: soft
 
